@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/23/trunk/lib/rddb/view_store
+END
+ram_view_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/23/trunk/lib/rddb/view_store/ram_view_store.rb
+END
+filesystem_view_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/23/trunk/lib/rddb/view_store/filesystem_view_store.rb
+END
+s3_view_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/23/trunk/lib/rddb/view_store/s3_view_store.rb
+END

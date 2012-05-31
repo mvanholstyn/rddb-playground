@@ -1,0 +1,54 @@
+8
+
+dir
+28
+http://rddb.rubyforge.org/svn/trunk/bin
+http://rddb.rubyforge.org/svn
+
+
+
+2007-10-28T22:56:53.505597Z
+12
+aeden
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+f09dd1ff-0257-4c7f-906d-a601a684f9db
+
+rddb-server
+file
+
+
+
+
+2007-11-27T02:34:25.000000Z
+d25ba1ec994a9bc5067e94e8740ee29a
+2007-10-28T22:56:53.505597Z
+12
+aeden
+has-props
+
+rddb-worker
+file
+
+
+
+
+2007-11-27T02:34:25.000000Z
+a6207214fb159c18f1bb34738f662cf2
+2007-10-28T22:56:53.505597Z
+12
+aeden
+has-props
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="0"
+   name=""
+   committed-date="2006-09-09T01:45:56.147754Z"
+   url="svn+ssh://RubyForge/var/svn/couchdb"
+   kind="dir"
+   uuid="521d647c-fb1c-0410-b396-892215e7cf34"
+   repos="svn+ssh://RubyForge/var/svn/couchdb"
+   revision="0"/>
+</wc-entries>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>test_doc_embedded_xml (CouchTest)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File Test.rb, line 90</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_doc_embedded_xml</span>
+
+    <span class="ruby-keyword kw">begin</span>  
+      <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;testing doc embedded xml&quot;</span>
+      <span class="ruby-constant">Couch</span><span class="ruby-operator">::</span><span class="ruby-constant">Db</span>.<span class="ruby-identifier">create</span>(<span class="ruby-ivar">@server</span>, <span class="ruby-identifier">$testdb</span>)
+      <span class="ruby-identifier">couch</span> = <span class="ruby-constant">Couch</span><span class="ruby-operator">::</span><span class="ruby-constant">Db</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@server</span>, <span class="ruby-identifier">$testdb</span>)     
+      
+      <span class="ruby-identifier">h1</span> = {<span class="ruby-identifier">:A</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'&lt;text&gt;AAA&lt;/text&gt;'</span>, <span class="ruby-identifier">:B</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'&lt;foo&gt;&lt;text&gt;BBB&lt;/text&gt;&lt;/foo&gt;'</span>}
+      <span class="ruby-identifier">doc</span> = <span class="ruby-constant">Couch</span><span class="ruby-operator">::</span><span class="ruby-constant">Doc</span>.<span class="ruby-identifier">create</span>(<span class="ruby-value str">&quot;XML_001&quot;</span>, <span class="ruby-identifier">h1</span>)
+      <span class="ruby-identifier">couch</span>.<span class="ruby-identifier">put</span>(<span class="ruby-identifier">doc</span>)
+      <span class="ruby-identifier">doc</span> = <span class="ruby-identifier">couch</span>.<span class="ruby-identifier">get</span>(<span class="ruby-value str">&quot;XML_001&quot;</span>)
+      <span class="ruby-identifier">val</span> = <span class="ruby-identifier">doc</span>.<span class="ruby-constant">A</span>
+      <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">doc</span>.<span class="ruby-constant">A</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'&lt;text&gt;AAA&lt;/text&gt;'</span>, <span class="ruby-node">&quot;wrong attribute A #{doc.A}&quot;</span>)
+      <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">doc</span>.<span class="ruby-constant">B</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'&lt;foo&gt;&lt;text&gt;BBB&lt;/text&gt;&lt;/foo&gt;'</span>, <span class="ruby-node">&quot;wrong attribute B #{doc.B}&quot;</span>)
+      
+      <span class="ruby-identifier">h1</span> = {<span class="ruby-identifier">:A</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'&lt;foo&gt;AAA&lt;/foo&gt;&lt;/text&gt;'</span>}
+      <span class="ruby-identifier">doc</span> = <span class="ruby-constant">Couch</span><span class="ruby-operator">::</span><span class="ruby-constant">Doc</span>.<span class="ruby-identifier">create</span>(<span class="ruby-value str">&quot;XML_002&quot;</span>, <span class="ruby-identifier">h1</span>)
+      <span class="ruby-identifier">couch</span>.<span class="ruby-identifier">put</span>(<span class="ruby-identifier">doc</span>)
+      <span class="ruby-comment cmt">#puts doc</span>
+      <span class="ruby-identifier">doc</span> = <span class="ruby-identifier">couch</span>.<span class="ruby-identifier">get</span>(<span class="ruby-value str">&quot;XML_002&quot;</span>)
+      <span class="ruby-comment cmt">#puts doc</span>
+      <span class="ruby-identifier">val</span> = <span class="ruby-identifier">doc</span>.<span class="ruby-constant">A</span>
+      <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">doc</span>.<span class="ruby-constant">A</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'&lt;foo&gt;AAA&lt;/foo&gt;&lt;/text&gt;'</span>, <span class="ruby-node">&quot;wrong attribute A #{doc.A}&quot;</span>)
+      
+      
+      <span class="ruby-constant">Couch</span><span class="ruby-operator">::</span><span class="ruby-constant">Db</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-ivar">@server</span>, <span class="ruby-identifier">$testdb</span>)
+      
+    <span class="ruby-keyword kw">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">details</span>
+      <span class="ruby-identifier">puts</span> <span class="ruby-identifier">details</span>.<span class="ruby-identifier">to_s</span>
+      <span class="ruby-identifier">puts</span> <span class="ruby-identifier">details</span>.<span class="ruby-identifier">backtrace</span>
+      <span class="ruby-identifier">assert</span>(<span class="ruby-keyword kw">false</span>, <span class="ruby-value str">'Unexpected exception.'</span>)
+    <span class="ruby-keyword kw">end</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

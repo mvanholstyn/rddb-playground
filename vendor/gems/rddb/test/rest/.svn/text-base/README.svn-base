@@ -1,0 +1,3 @@
+To execute the integration tests you must run the bin/rddb_server with:
+
+  bin/rddb_server run

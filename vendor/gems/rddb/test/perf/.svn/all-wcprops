@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/svn/!svn/ver/19/trunk/test/perf
+END
+tao_materialized_only_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/19/trunk/test/perf/tao_materialized_only_test.rb
+END
+test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/19/trunk/test/perf/test_helper.rb
+END
+tao-all2.dat.gz
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/1/trunk/test/perf/tao-all2.dat.gz
+END
+tao-all2.col
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/1/trunk/test/perf/tao-all2.col
+END
+tao_s3_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/1/trunk/test/perf/tao_s3_test.rb
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/19/trunk/test/perf/README
+END
+tao_data_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/19/trunk/test/perf/tao_data_test.rb
+END

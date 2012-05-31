@@ -1,0 +1,52 @@
+8
+
+dir
+28
+http://rddb.rubyforge.org/svn/trunk/example
+http://rddb.rubyforge.org/svn
+
+
+
+2007-11-03T17:55:42.398984Z
+17
+aeden
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+f09dd1ff-0257-4c7f-906d-a601a684f9db
+
+example1.yml
+file
+
+
+
+
+2007-11-27T02:34:25.000000Z
+77c6d7aae8ab0fa13605db8703afe7d3
+2007-10-26T13:10:27.931183Z
+1
+aeden
+
+example1.rb
+file
+
+
+
+
+2007-11-27T02:34:25.000000Z
+1e69409a5d2d7096b1e0f8dc305063e0
+2007-11-03T17:55:42.398984Z
+17
+aeden
+

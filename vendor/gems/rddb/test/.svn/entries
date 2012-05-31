@@ -1,0 +1,55 @@
+8
+
+dir
+28
+http://rddb.rubyforge.org/svn/trunk/test
+http://rddb.rubyforge.org/svn
+
+
+
+2007-11-17T13:26:41.299862Z
+27
+aeden
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+f09dd1ff-0257-4c7f-906d-a601a684f9db
+
+unit
+dir
+
+test_helper.rb
+file
+
+
+
+
+2007-11-27T02:34:25.000000Z
+071ab9ab0e81b1ad4ec17c5941a81436
+2007-10-26T13:10:27.931183Z
+1
+aeden
+
+integration
+dir
+
+s3unit
+dir
+
+perf
+dir
+
+rest
+dir
+

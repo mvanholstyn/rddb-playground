@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/22/trunk/lib/rddb/server
+END
+default_handler.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/20/trunk/lib/rddb/server/default_handler.rb
+END
+server.rb
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/20/trunk/lib/rddb/server/server.rb
+END
+http_request.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/1/trunk/lib/rddb/server/http_request.rb
+END
+view_handler.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/22/trunk/lib/rddb/server/view_handler.rb
+END
+document_handler.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/1/trunk/lib/rddb/server/document_handler.rb
+END

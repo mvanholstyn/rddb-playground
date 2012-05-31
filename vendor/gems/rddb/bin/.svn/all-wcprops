@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 26
+/svn/!svn/ver/12/trunk/bin
+END
+rddb-server
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/12/trunk/bin/rddb-server
+END
+rddb-worker
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/12/trunk/bin/rddb-worker
+END

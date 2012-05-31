@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>test_select (CouchTest)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File Test.rb, line 125</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_select</span>
+
+    <span class="ruby-keyword kw">begin</span>  
+      <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;testing select&quot;</span>
+      <span class="ruby-constant">Couch</span><span class="ruby-operator">::</span><span class="ruby-constant">Db</span>.<span class="ruby-identifier">create</span>(<span class="ruby-ivar">@server</span>, <span class="ruby-identifier">$testdb</span>)
+      <span class="ruby-identifier">couch</span> = <span class="ruby-constant">Couch</span><span class="ruby-operator">::</span><span class="ruby-constant">Db</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@server</span>, <span class="ruby-identifier">$testdb</span>) 
+      
+
+      <span class="ruby-comment cmt">#</span>
+      <span class="ruby-comment cmt"># Create 5 documents - 2 designs and 3 test documents</span>
+      <span class="ruby-comment cmt">#</span>
+      <span class="ruby-identifier">doc</span> = <span class="ruby-constant">Couch</span><span class="ruby-operator">::</span><span class="ruby-constant">Doc</span>.<span class="ruby-identifier">create</span>(<span class="ruby-value str">&quot;design_all&quot;</span>)
+      <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">table_select</span> = <span class="ruby-value str">'SELECT true;Column Name'</span>
+      <span class="ruby-identifier">couch</span>.<span class="ruby-identifier">put</span>(<span class="ruby-identifier">doc</span>)
+      
+      <span class="ruby-identifier">doc</span> = <span class="ruby-constant">Couch</span><span class="ruby-operator">::</span><span class="ruby-constant">Doc</span>.<span class="ruby-identifier">create</span>(<span class="ruby-value str">&quot;design_foo&quot;</span>)
+      <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">table_select</span> = <span class="ruby-value str">'SELECT Type==&quot;BOOK&quot;;Column Subject;Column Name'</span>
+      <span class="ruby-identifier">couch</span>.<span class="ruby-identifier">put</span>(<span class="ruby-identifier">doc</span>)
+      
+      <span class="ruby-identifier">doc</span> = <span class="ruby-constant">Couch</span><span class="ruby-operator">::</span><span class="ruby-constant">Doc</span>.<span class="ruby-identifier">create</span>(<span class="ruby-value str">&quot;t1&quot;</span>)
+      <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">type</span> = <span class="ruby-value str">&quot;BOOK&quot;</span>
+      <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">subject</span> = <span class="ruby-value str">&quot;Football&quot;</span>
+      <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">name</span> = <span class="ruby-value str">&quot;Why we play&quot;</span>
+      <span class="ruby-identifier">couch</span>.<span class="ruby-identifier">put</span>(<span class="ruby-identifier">doc</span>)
+      
+      <span class="ruby-identifier">doc</span> = <span class="ruby-constant">Couch</span><span class="ruby-operator">::</span><span class="ruby-constant">Doc</span>.<span class="ruby-identifier">create</span>(<span class="ruby-value str">&quot;t2&quot;</span>)
+      <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">type</span> = <span class="ruby-value str">&quot;BOOK&quot;</span>
+      <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">subject</span> = <span class="ruby-value str">&quot;Baseball&quot;</span>
+      <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">name</span> = <span class="ruby-value str">&quot;Go Redsox&quot;</span>
+      <span class="ruby-identifier">couch</span>.<span class="ruby-identifier">put</span>(<span class="ruby-identifier">doc</span>)
+      
+      <span class="ruby-identifier">doc</span> = <span class="ruby-constant">Couch</span><span class="ruby-operator">::</span><span class="ruby-constant">Doc</span>.<span class="ruby-identifier">create</span>(<span class="ruby-value str">&quot;t3&quot;</span>)
+      <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">type</span> = <span class="ruby-value str">&quot;MOVIE&quot;</span>
+      <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">subject</span> = <span class="ruby-value str">&quot;War&quot;</span>
+      <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">name</span> = <span class="ruby-value str">&quot;Uncivil War&quot;</span>
+      <span class="ruby-identifier">couch</span>.<span class="ruby-identifier">put</span>(<span class="ruby-identifier">doc</span>)
+      
+      <span class="ruby-comment cmt">#</span>
+      <span class="ruby-comment cmt"># Test the CouchDb-Ruby built in table</span>
+      <span class="ruby-comment cmt">#</span>
+      <span class="ruby-identifier">tbl</span> = <span class="ruby-identifier">couch</span>.<span class="ruby-identifier">designs</span>
+      <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">tbl</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>, <span class="ruby-value str">&quot;There should be 2 designs&quot;</span>)
+      
+      <span class="ruby-identifier">tbl</span> = <span class="ruby-identifier">couch</span>.<span class="ruby-identifier">table</span>(<span class="ruby-value str">&quot;design_all:select&quot;</span>)
+      <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">tbl</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">6</span>, <span class="ruby-node">&quot;There should be 6 not #{tbl.size}&quot;</span>)
+      
+      <span class="ruby-identifier">tbl</span> = <span class="ruby-identifier">couch</span>.<span class="ruby-identifier">table</span>(<span class="ruby-value str">&quot;design_foo:select&quot;</span>)
+      <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">tbl</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>, <span class="ruby-value str">&quot;There are should be two foo documents&quot;</span>)
+      <span class="ruby-identifier">t2</span> = <span class="ruby-identifier">tbl</span>[<span class="ruby-value str">&quot;t2&quot;</span>]
+      
+      
+      <span class="ruby-constant">Couch</span><span class="ruby-operator">::</span><span class="ruby-constant">Db</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-ivar">@server</span>, <span class="ruby-identifier">$testdb</span>)
+      
+    <span class="ruby-keyword kw">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">details</span>
+      <span class="ruby-identifier">puts</span> <span class="ruby-identifier">details</span>.<span class="ruby-identifier">to_s</span>
+      <span class="ruby-identifier">puts</span> <span class="ruby-identifier">details</span>.<span class="ruby-identifier">backtrace</span>
+      <span class="ruby-identifier">assert</span>(<span class="ruby-keyword kw">false</span>, <span class="ruby-value str">'Unexpected exception.'</span>)
+    <span class="ruby-keyword kw">end</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

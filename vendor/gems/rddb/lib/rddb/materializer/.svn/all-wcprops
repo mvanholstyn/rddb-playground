@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/17/trunk/lib/rddb/materializer
+END
+threaded_materializer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/17/trunk/lib/rddb/materializer/threaded_materializer.rb
+END
+basic_materializer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/17/trunk/lib/rddb/materializer/basic_materializer.rb
+END

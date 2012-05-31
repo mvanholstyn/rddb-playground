@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/17/trunk/lib/rddb/worker
+END
+ec2_worker.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/17/trunk/lib/rddb/worker/ec2_worker.rb
+END
+local_worker.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/14/trunk/lib/rddb/worker/local_worker.rb
+END
+rinda_worker.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/14/trunk/lib/rddb/worker/rinda_worker.rb
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/22/trunk/lib/rddb/materialization_store
+END
+s3_materialization_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/22/trunk/lib/rddb/materialization_store/s3_materialization_store.rb
+END
+ram_materialization_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/22/trunk/lib/rddb/materialization_store/ram_materialization_store.rb
+END
+filesystem_materialization_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/22/trunk/lib/rddb/materialization_store/filesystem_materialization_store.rb
+END

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: Couch</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">Couch</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/src/couchdb/const_rb.html">
+                src/couchdb/const.rb
+                </a>
+        <br />
+                <a href="../files/src/couchdb/db_rb.html">
+                src/couchdb/db.rb
+                </a>
+        <br />
+                <a href="../files/src/couchdb/doc_rb.html">
+                src/couchdb/doc.rb
+                </a>
+        <br />
+                <a href="../files/src/couchdb/error_rb.html">
+                src/couchdb/error.rb
+                </a>
+        <br />
+                <a href="../files/src/couchdb/row_rb.html">
+                src/couchdb/row.rb
+                </a>
+        <br />
+                <a href="../files/src/couchdb/server_rb.html">
+                src/couchdb/server.rb
+                </a>
+        <br />
+                <a href="../files/src/couchdb/table_rb.html">
+                src/couchdb/table.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+include REXML
+</p>
+
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+    <div id="class-list">
+      <h3 class="section-bar">Classes and Modules</h3>
+
+      Class <a href="Couch/Db.html" class="link">Couch::Db</a><br />
+Class <a href="Couch/Doc.html" class="link">Couch::Doc</a><br />
+Class <a href="Couch/RequestFailure.html" class="link">Couch::RequestFailure</a><br />
+Class <a href="Couch/Row.html" class="link">Couch::Row</a><br />
+Class <a href="Couch/Server.html" class="link">Couch::Server</a><br />
+Class <a href="Couch/Table.html" class="link">Couch::Table</a><br />
+
+    </div>
+
+    <div id="constants-list">
+      <h3 class="section-bar">Constants</h3>
+
+      <div class="name-list">
+        <table summary="Constants">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">Str_Id</td>
+          <td>=</td>
+          <td class="context-item-value">&quot;id&quot;</td>
+          <td width="3em">&nbsp;</td>
+          <td class="context-item-desc">
+TEST TEST
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">Str_Doc</td>
+          <td>=</td>
+          <td class="context-item-value">&quot;doc&quot;</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">Str_Table</td>
+          <td>=</td>
+          <td class="context-item-value">&quot;table&quot;</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">Str_Tr</td>
+          <td>=</td>
+          <td class="context-item-value">&quot;tr&quot;</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">Str_Td</td>
+          <td>=</td>
+          <td class="context-item-value">&quot;td&quot;</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">Str_Previous_Rev</td>
+          <td>=</td>
+          <td class="context-item-value">&quot;previous_rev&quot;</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">Str_Dbs</td>
+          <td>=</td>
+          <td class="context-item-value">&quot;dbs&quot;</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">Str_Db</td>
+          <td>=</td>
+          <td class="context-item-value">&quot;db&quot;</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">Str_Field</td>
+          <td>=</td>
+          <td class="context-item-value">&quot;field&quot;</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">Str_All_Dbs</td>
+          <td>=</td>
+          <td class="context-item-value">&quot;$all_dbs&quot;</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">Str_Success</td>
+          <td>=</td>
+          <td class="context-item-value">&quot;success&quot;</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">Str_Update_Info</td>
+          <td>=</td>
+          <td class="context-item-value">&quot;updateinfo&quot;</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">Str_Text</td>
+          <td>=</td>
+          <td class="context-item-value">&quot;text&quot;</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">Str_Number</td>
+          <td>=</td>
+          <td class="context-item-value">&quot;number&quot;</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>
